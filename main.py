@@ -32,7 +32,11 @@ warnings.filterwarnings('ignore')
 
 
 def main(args):
-    return fusion.fusion_reginf(lsub, MS_IM, HS_IM)
+    # Définir une liste de paramètres de régularisation, par défaut ici mu = 1.
+    # Autre exemple : mus = 10**np.linspace(-5, 5, 10)
+    mus=[1e0]
+    # Fusion
+    return fusion.fusion_reginf(mus, lsub, MS_IM, HS_IM)
 
 
 # def choose_subspace(args):
